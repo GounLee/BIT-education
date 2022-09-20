@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./test.css" rel="stylesheet">
+    <link href="./css/mCss.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="http://fonts.googleapis.com/earlyaccess/nanumpenscript" rel="stylesheet">
+
+
+    <script src="./jQuery/jquery-3.6.1.min.js"></script>
+    <script src="./jQuery/masonry.pkgd.min.js"></script>
+
+    </style>
+
+    <script>
+        $(document).ready(function () {
+
+            $('ul.tabs li').click(function () {
+                var tab_id = $(this).attr('data-tab');
+
+                $('ul.tabs li').removeClass('current');
+                $('.tab-content').removeClass('current');
+
+                $(this).addClass('current');
+                $("#" + tab_id).addClass('current');
+            })
+
+        
+        
+      })
+
+    </script>
+</head>
+
+<body>
+    <header id="main_header">
+        <hr />
+        <div id="head_top_nav">
+          <div class="head_top_left">
+            <span
+              ><img
+                src="images/top_location_icon.png"
+                alt=""
+                style="color: black"
+            /></span>
+            <a href="#">강남</a>
+            <span><img src="images/top_line.jpg" /></span>
+            <a href="#">종로</a>
+            <span><img src="images/top_line.jpg" /></span>
+            <a href="#">당산</a>
+          </div>
+          <div class="head_top_right">
+            <a href="./login.html">로그인</a>
+            <span><img src="images/top_line.jpg" /></span>
+            <a href="./join.html">회원가입</a>
+            <!-- <span><a href = "#">고객센터</a></span> -->
+          </div>
+
+          <nav id="main_gnb">
+            <ul>
+              <li>
+                <a href="intro.html"><span>소개글</span></a>
+                <ul class="sub">
+                  <li><a href="#">비트소개</a></li>
+                  <li><a href="#">조직도</a></li>
+                  <li><a href="#">찾아오는길</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <span>학원시스템</span>
+                <ul class="sub">
+                  <li><a href="#">학원안내</a></li>
+                  <li><a href="company.html">강의실사용예약</a></li>
+                </ul>
+              </li>
+              <li>
+                <span>게시판</span>
+                <ul class="sub">
+                  <li><a href="#">알림마당</a></li>
+                  <li><a href="#">수강생게시판</a></li>
+                  <li><a href="#">FAQ</a></li>
+                </ul>
+              </li>
+              <li>
+                <span>마이페이지</span>
+                <ul class="sub">
+                  <li><a href="mypage.html">개인정보수정</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+  
+    <div class="content">    
+    <div class="container">        
+
+        <ul class="tabs">
+            <li class="tab-link current" data-tab="tab-1">소개글</li>
+            <li class="tab-link" data-tab="tab-2">조직도</li>
+            <li class="tab-link" data-tab="tab-3">임원소개</li>
+            <li class="tab-link" data-tab="tab-3">오시는 길</li>
+        </ul>
+
+        <div id="tab-1" class="tab-content current">
+            <img src="./images/chairs.jpg" width="40%" />
+            <div class="description">
+                <p>On March 3, 1969 the United States Navy established
+                    an elite school for the top one percent of its pilots.
+                    Its purpose was to teach the lost art of aerial combat
+                    and to insure that the handful of men who
+                    graduated were the best fighter pilots in the world.
+
+                    They succeeded.
+
+                    Today, the Navy calls it Fighter Weapons School.
+                    The flyers call it:
+
+                    1969년 3월 3일, 미합중국 해군은 최상위 1%의
+                    전투기 조종사들을 위한 엘리트 교육시설을 설립하였다.
+                    해당 학교는 잃어버린 근접 공중 전투감각을 향상시켜
+                    교육생들을 세계 최고의 조종사로 만드는 데 그 목적이 있었다.
+
+                    그들은 성공했다.
+
+                    오늘날, 미 해군에선 이 학교를 항공전 학교라고 부른다.
+
+                    그리고 조종사들이 부르는 이름은:
+
+                    TOP GUN
+                </p>
+            </div>
+        </div>
+        <div id="tab-2" class="tab-content">
+            <a href="#">Left Button</a> <a href="#">Right Button</a>
+            <article class="show">
+                <h1>피트 미첼 Pete Mitchell</h1>
+                <img src="./images/chairs.jpg" width="40%" />
+                <p>Lt. Pete 'Maverick' Mitchell. 피트 '매버릭' 미첼 대위.
+
+                    비행 실력은 항모비행전대 내에서 2위일 정도로 우수하지만 제멋대로인
+                    기질이 있어서 위험한 비행 등으로 우수한 실력을 갖추고 있음에도
+                    상관 스팅어의 골칫거리가 될 정도로 제멋대로인 인물이다.
+                </p>
+            </article>
+            <article>
+                <h1>샬럿 Charlotte</h1>
+                <img src="./images/Charlotte.jpg" width="40%" />
+                <p> 천체물리학(astrophysics) 박사이며, 군인이 아닌 민간인 신분이지만,
+                    베일에 싸인 적의 신형 전투기 MiG-28에 대해 연구한 이론지식이 군에 인정받아
+                    탑건 스쿨에 초빙된 전문가이다. 파일럿들을 상대로 자신이 연구하고 분석한
+                    MiG-28의 비행 특성에 대한 이론적인 강의와 그에 따른 대응 전술기동 등을 검토하고 조언한다.
+                </p>
+            </article>
+            <article>
+                <h1>아이스맨Iceman</h1>
+                <img src="./images/iceman.jpg" width="40%" />
+                <p> 대대 콜사인(squadron call sign)은 아이스맨, 본명은 톰 카잔스키. 계급은 대위.
+                </p>
+            </article>
+        </div>
+        <div id="tab-3" class="tab-content">
+            <iframe
+          width="760"
+          height="500"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25324.49831563147!2d126.99266357910157!3d37.49465430000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca15aedf50c61%3A0x2721a51208d7c87c!2z67mE7YOA7J6E!5e0!3m2!1sko!2skr!4v1663584193879!5m2!1sko!2skr"
+          controls="controls"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        </div>
+        <div id="tab-4" class="tab-content">
+            <iframe
+          width="760"
+          height="500"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25324.49831563147!2d126.99266357910157!3d37.49465430000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca15aedf50c61%3A0x2721a51208d7c87c!2z67mE7YOA7J6E!5e0!3m2!1sko!2skr!4v1663584193879!5m2!1sko!2skr"
+          controls="controls"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        </div>
+
+    </div>
+    </div>
+
+
+   <!--footer-->
+   <div id="footWrap">
+    <div class="section">
+        <div class="siteLink" style="z-index: 30">
+          <!-- <img src="./images/26753MP8MJ_1.jpg" width="100px" height="100px"> -->
+            <label style="margin-left: 200px" for="select1" class="blind"></label>
+            <select id="select1">
+                <option value="">타회의실 사이트 바로가기</option>
+                <option value="https://www.spacecloud.kr/">스페이스 클라우드</option>
+                
+            </select>
+            <a href="#" class="btn" id="goto-btn" title="이동" onclick="return goto_btn(this);">이동</a>
+        </div>
+        <ul class="info">
+            <li style="margin-left: 200px"><a href="http://lib.sen.go.kr/lib/html.do?menu_idx=44" target="_blank">개인정보처리방침</a></li>
+            <li><a href="/9_etc/guide.html">이용안내</a></li>
+        </ul>
+        <div class="address">
+            <dl>
+                <dt>주소 :</dt>
+                <dd style="margin-left: 200px">서울특별시 서초구 서초대로74길 33 (비트빌) </dd>
+            </dl>
+                            <dl>
+                <dt>고객센터 :&nbsp;&nbsp;</dt>
+                <dd>02-2022-2022(내선 20번) ( 이용시간: 평일 오전 9시~ 오후 6시 / 점심시간: 12시~ 13시 제외)</dd>
+            </dl>
+            <span style="margin-left: 200px">Copyright 2022. BITCOMPUTER. All rights reserved.</span>
+        </div>
+    </div>
+</div>
+<!--footer-->
+
+   </body>
+
+</html>
